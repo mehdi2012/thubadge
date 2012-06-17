@@ -1,0 +1,26 @@
+本DEMO基于php sdk 2.0，如果调api过程中遇到问题，请查看php sdk 2.0中的说明文档
+
+一、准备工作
+1、首先修改class文件夹下config.inc.php文件中的$config->APPID、$config->APIKey、$config->SecretKey改成你自己的app的appid、apikey和secret（如果没有，到这里来申请：http://app.renren.com/developers/newapp）  
+
+
+2、然后在人人站内应用的APP中配置信息：
+Canvas Page Name:phpappdemo  //备注：这个我已经用了，你们需要写成别的
+Callback URL:http://127.0.0.1/phpapp/
+*应用访问URL:http://apps.renren.com/phpappdemo/
+服务器域名：127.0.0.1
+Iframe高度：600
+
+3、demo中将phpapp文件夹下的代码放在服务根目录的phpapp目录中
+
+4、要修改config.inc.php文件中的，$config->redirecturi= 'http://apps.renren.com/phpappdemo/';（phpappdemo改成你自己的）
+
+5、浏览器访问：http://apps.renren.com/phpappdemo/  （phpappdemo改成你自己的）
+
+
+二、功能简介
+1、授权、获取用户信息
+2、调api同步新鲜事、上传相册
+3、人人分享：基于js、参数直接传递两种
+4、人人喜欢
+5、dialog：发新鲜事弹层、邀请好友弹层
