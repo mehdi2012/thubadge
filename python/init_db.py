@@ -1,5 +1,6 @@
 #-*- encoding:utf-8 -*-
 import MySQLdb, sys
+import codecs, string
 
 try:
     conn = MySQLdb.connect(
@@ -13,6 +14,13 @@ except MySQLdb.Error, e:
     print "error %d: %s" % (e.args[0], e.args[1])
     sys.exit(1)
 
+infile = open("badge_info.txt")
+infile.seek(0)
+txt_list = infile.readlines()
+infile.close()
+
+txt_list = [line.decode("gbk") for line in txt_list]
+    
 with conn:
     cursor = conn.cursor()
 
